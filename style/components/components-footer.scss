@@ -1,0 +1,168 @@
+@import "../typography/settings-colors.scss";
+@import "../typography/setting-mixins.scss";
+
+.footer {
+    position: relative;
+    height: 567px;
+    width: 100%;
+    border-top: 12px solid $grey500;
+    background-color: $grey700;
+    padding: 52px 0 32px 0;
+    @include lg() {
+        column-gap: 78px;
+        width: 100%;
+        height: 324px;
+        padding: 64px 74px 64px 373px;
+        margin: 0 auto;
+    }
+    .section_wrapper {
+        grid-template-rows: 401px 38px;
+        row-gap: 32px;
+        @include lg() {
+            width: 1000px;
+            margin: 0;
+            grid-template-rows: 184px;
+        }
+    }
+
+    &__all-rights {
+        height: 35px;
+        color: $grey500;
+        text-align: center;
+        @include lg() {
+            position: relative;
+            left: 415px;
+            bottom: 100px;
+            width: 177px;
+            text-align: left;
+        }
+    }
+
+    a {
+        color: $grey200;
+        transition: color 0.3s ease-out;
+        &:hover {
+            cursor: pointer;
+            color: $primary300;
+        }
+    }
+
+    li {
+        list-style: none;
+        line-height: 19px;
+    }
+
+    h4 {
+        color: white;
+        height: 20px;
+        text-align: justify;
+    }
+
+    div {
+        @include lg() {
+            height: 100%;
+        }
+    }
+
+    &__nav {
+        height: 401px;
+        border-bottom: 1px solid $grey600;
+        display: grid;
+        grid-template-columns: 145px 167px;
+        column-gap: 23px;
+
+        @include lg() {
+            height: 184px;
+            grid-template-columns: 486px 429px;
+            column-gap: 85px;
+            border-bottom: none;
+        }
+        &--left {
+            display: grid;
+            grid-template-rows: 248px 88px;
+            row-gap: 32px;
+            @include lg() {
+                grid-template-columns: 256px 145px;
+                column-gap: 85px;
+                grid-template-rows: 184px;
+            }
+        }
+        &--right {
+            display: grid;
+            grid-template-rows: 184px 28px;
+            row-gap: 32px;
+            @include lg() {
+                grid-template-columns: 167px 177px;
+                column-gap: 85px;
+                grid-template-rows: 184px;
+            }
+        }
+        &--kids {
+            &__lists {
+                display: grid;
+                grid-template-rows: 20px 20px 20px 20px 20px 20px 20px;
+                row-gap: 12px;
+                @include lg() {
+                    height: 148px;
+                    display: flex;
+                    flex-flow: column wrap;
+                }
+            }
+        }
+        &--initiatives {
+            &__lists {
+                display: grid;
+                grid-template-rows: 20px 20px 20px 20px 20px;
+                row-gap: 12px;
+            }
+        }
+
+        &--find-us {
+            display: grid;
+            grid-template-columns: 28px 28px;
+            column-gap: 30px;
+            @include lg() {
+                margin-top: 0;
+                grid-template-rows: 20px 28px;
+                row-gap: 24px;
+            }
+           
+            a {
+                width: 28px;
+                height: 28px;
+            }
+            i {
+                font-size: 28px;
+                transition: border 0.3s ease-out;
+                &:hover {
+                    cursor: pointer;
+                    border: 1px solid $primary300;
+                }
+            }
+        }
+        &--trainings {
+            &__lists {
+                display: grid;
+                grid-template-rows: 20px 20px;
+                row-gap: 12px;
+            }
+        }
+        &__facebook-item {
+            background: $grey200;
+            border-radius: 50%;
+            width: 28px;
+            height: 28px;
+        }
+        &__circle-icon {
+            background-color: $grey200;
+            width: 28px;
+            height: 28px;
+            color: rgb(86, 86, 86);
+            border-radius: 50%;
+            text-align: center;
+            &:hover {
+                color: $primary300;
+            }
+        }
+    }
+}

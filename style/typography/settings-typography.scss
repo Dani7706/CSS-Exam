@@ -1,0 +1,194 @@
+@import url("../../Lato2OFL/Lato2OFL/Lato-Regular.ttf");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import "../typography/settings-colors.scss";
+@import "../typography/setting-mixins.scss";
+
+html {
+    font-family: "Lato", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    font-style: normal;
+}
+@each $header, $size in (h1: 36px, h2: 30px, h3: 24px, h4: 18px, h5: 12px) {
+    #{$header} {
+        font-size: $size;
+    }
+}
+h1 {
+    font-weight: 600;
+    line-height: 44px;
+}
+h2 {
+    font-style: normal;
+    font-weight: 600;
+    line-height: 36px;
+}
+h3 {
+    font-style: normal;
+    font-weight: bold;
+    line-height: 30px;
+}
+p {
+    font-size: 16px;
+    line-height: 20px;
+    margin: 0;
+}
+button {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 20px;
+}
+.btn {
+    &-login {
+        font-size: 13px;
+        line-height: 16px;
+    }
+}
+
+.program_description {
+    h1 {
+        color: #41bead;
+    }
+}
+.header__nav {
+    a {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 13px;
+        line-height: 16px;
+    }
+    h1 {
+        font-style: normal;
+        font-weight: 600;
+        line-height: 44px;
+    }
+    figcaption {
+        font-size: 10px;
+    }
+}
+
+.sign-in__btn {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 20px;
+}
+.main {
+    &__first-steps {
+        h2 {
+            @include lg() {
+                font-size: 36px;
+                line-height: 44px;
+            }
+        }
+        &__level {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 14px;
+        }
+    }
+}
+.main-about {
+    &__trainers--viara,
+    &__trainers--vladimir,
+    &__other-trainers__trainer {
+        h2 {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 24px;
+        }
+        span {
+            font-family: Lato;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 16px;
+        }
+    }
+    &__join {
+        &__input {
+            &::placeholder {
+                font-family: Lato;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 19px;
+            }
+        }
+
+        button {
+            font-family: Lato;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 16px;
+            line-height: 20px;
+        }
+        h3 {
+            @include lg() {
+                font-family: Montserrat;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 36px;
+                line-height: 44px;
+            }
+        }
+    }
+}
+.main-contacts {
+    &__find-us {
+        &--btn {
+            font-family: Lato;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 12px;
+            line-height: 16px;
+        }
+        h3 {
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 24px;
+        }
+        span {
+            font-family: Lato;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 20px;
+        }
+    }
+}
+.footer {
+    h4 {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 22px;
+        font-family: "Lato", sans-serif;
+    }
+    a {
+        font-family: Lato;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 19px;
+    }
+    &__all-rights{
+        @include lg() {
+         font-size: 15px;
+        line-height: 19px;     
+        }
+    }
+}

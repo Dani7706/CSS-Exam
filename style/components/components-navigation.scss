@@ -1,0 +1,74 @@
+@import "../typography/settings-colors.scss";
+@import "../typography/setting-mixins.scss";
+@import url("../../font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css");
+
+.header__nav {
+  background: #ffffff;
+  height: 72px;
+  width: 335px;
+  margin: 0px 28px 0px 20px;
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  column-gap: 135px;
+  align-items: center;
+  margin: 0 auto;
+  @include lg() {
+    height: 74px;
+    width: 1290px;
+    grid-template-columns: 150px 1fr;
+    column-gap: 400px;
+    justify-content: center;
+  }
+  &__logo {
+    height: 56px;
+    display: grid;
+    grid-template-columns: 13px 1fr;
+    column-gap: 14px;
+    align-items: center;
+    @include lg() {
+      height: 42px;
+    }
+
+    figcaption {
+      color: $secondary800;
+      text-align: center;
+    }
+  }
+  &__lists {
+    height: 42px;
+    display: grid;
+    grid-template-columns: 82px 24px;
+    column-gap: 24px;
+    align-items: center;
+    @include lg() {
+      grid-template-columns: 1fr 82px;
+      column-gap: 32px;
+    }
+
+    &--search {
+      @include lg() {
+        transition: transform 0.3s ease-out 0.2s;
+        &:hover {
+          transform: scale(1.5);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  ul {
+    text-transform: uppercase;
+    @include lg() {
+      margin-left: 4px;
+    }
+  }
+
+  a {
+    color: $grey700;
+    @include lg() {
+      transition: color 0.4s ease-out;
+      &:hover {
+        color: $secondary800;
+      }
+    }
+  }
+}

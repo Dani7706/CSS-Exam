@@ -1,0 +1,8 @@
+@import "../typography/setting-mixins.scss";
+
+.p__padding{
+    @include lg() {
+        padding-left: 64px;  
+    }
+   
+}

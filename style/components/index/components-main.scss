@@ -1,0 +1,303 @@
+@import "../../typography/settings-colors.scss";
+@import "../../typography/setting-mixins.scss";
+
+.main {
+    display: grid;
+    grid-template-rows: 302px 1fr 414px 757px 1014px;
+    row-gap: 59px;
+    padding-bottom: 96px;
+    position: relative;
+    @include lg() {
+        padding-bottom: 148px;
+        grid-template-rows: 302px 1fr 201.93px 554px 412px 332px;
+    }
+    &__first-steps {
+        background-color: $blue400;
+        padding: 64px 0 84px 0;
+        color: white;
+        width: 100%;
+        text-align: center;
+        @include lg() {
+            padding: 68px 0 48px 0;
+        }
+        &__level {
+            width: 89px;
+            height: 22px;
+            text-transform: uppercase;
+            background-color: $secondary500;
+            border-radius: 4px;
+            box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12),
+                0 1px 3px 0 rgba(0, 0, 0, 0.2);
+            padding: 4px 8px;
+        }
+        .section_wrapper {
+            grid-template-rows: 22px 108px;
+            row-gap: 24px;
+            justify-items: center;
+            @include lg() {
+                grid-template-rows: 22px 88px;
+                width: 644px;
+            }
+        }
+        h2 {
+            color: white;
+        }
+    }
+    &__course-description {
+        padding-top: 507px;
+        width: 100%;
+        @include lg() {
+            padding-top: 93px;
+            margin-bottom: 37px;
+        }
+        .section_wrapper {
+            grid-template-columns: 335px;
+            grid-template-rows: 620px 190px;
+            row-gap: 32px;
+            justify-items: center;
+            justify-content: center;
+            @include lg() {
+                grid-template-columns: 739px 440px;
+                grid-template-rows: 321px;
+                column-gap: 111px;
+                align-items: center;
+            }
+        }
+        &--article {
+            width: 100%;
+            display: flex;
+            flex-flow: column;
+            justify-content: space-between;
+            @include lg() {
+                height: 100%;
+            }
+            p {
+                margin: 0;
+            }
+        }
+        &--images {
+            position: relative;
+        }
+        &--trainer {
+            width: 100%;
+        }
+        &--start {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    &__important {
+        padding-top: 5px;
+        .section_wrapper {
+            grid-template-rows: 168px 10px 172px;
+            row-gap: 32px;
+            @include lg() {
+                grid-template-columns: 552px 10px 552px;
+                grid-template-rows: 200px;
+                column-gap: 88px;
+            }
+        }
+
+        &__item {
+            display: grid;
+            row-gap: 16px;
+            grid-template-rows: auto auto;
+            &--first {
+                @include lg() {
+                    grid-template-rows: 36px 60px;
+                }
+            }
+            &--second {
+                @include lg() {
+                    grid-template-rows: 72px 80px;
+                }
+                .headings_wrapper {
+                    &--first {
+                        @include lg() {
+                            display: none;
+                        }
+                    }
+                    &--second {
+                        display: none;
+                        @include lg() {
+                            display: flex;
+                        }
+                    }
+                }
+            }
+            &__content {
+                height: 120px;
+                display: flex;
+                flex-flow: column;
+                justify-content: space-between;
+                @include lg() {
+                    height: 80px;
+                }
+            }
+        }
+    }
+    &__programs {
+        background-image: url("../../../images/images-index/Subtract\ -phone.svg");
+        background-size: contain;
+        padding: 59px 0 69px 0;
+        width: 100%;
+        @include lg() {
+            background-repeat: repeat;
+            display: grid;
+            grid-template-columns: 1fr 352px;
+            column-gap: 137px;
+            padding: 64px 137px 60px 75px;
+        }
+        li {
+            background-color: white;
+            border-radius: 10px;
+        }
+        .section_wrapper {
+            grid-template-rows: 72px 140px 1fr;
+            row-gap: 24px;
+
+            @include lg() {
+                width: 738px;
+                grid-template-rows: 36px 60px 1fr;
+                justify-items: flex-start;
+            }
+        }
+        &__items {
+            display: grid;
+            grid-template-rows: 22px 52px 52px 94px 72px;
+            row-gap: 16px;
+
+            @include lg() {
+                grid-template-rows: 22px 50px 50px 50px 50px;
+                row-gap: 12px;
+                margin-left: 63px;
+                margin-top: 8px;
+            }
+        }
+        &__item {
+            display: grid;
+            grid-template-columns: 265px 16px;
+            column-gap: 20px;
+            padding: 14px 20px 16px 14px;
+            @include lg() {
+                grid-template-columns: 602px 16px;
+                column-gap: 24px;
+                padding: 14px 20px 14px 14px;
+                margin-bottom: 4px;
+            }
+            img {
+                align-self: center;
+                height: 9.98px;
+            }
+            &--list {
+                display: grid;
+                grid-template-columns: 19px 1fr;
+            }
+        }
+
+        &__shedule {
+            display: none;
+            @include lg() {
+                display: block;
+                margin-top: 186px;
+                margin-bottom: 13px;
+                height: 231px;
+            }
+        }
+    }
+    &__certificate {
+        display: none;
+        @include lg() {
+            display: block;
+            margin-bottom: 49px;
+        }
+        .section_wrapper {
+            @include lg() {
+                grid-template-columns: 608px 1fr;
+                column-gap: 241px;
+                align-items: center;
+            }
+        }
+        &--content {
+            p {
+                @include lg() {
+                    margin-top: 16px;
+                }
+            }
+        }
+        &--image {
+            @include lg() {
+                width: 363px;
+                height: 256px;
+                background-color: $grey300;
+                display: flex;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+                border-radius: 12px;
+                box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12),
+                    0 1px 3px 0 rgba(0, 0, 0, 0.2);
+            }
+        }
+    }
+    &__more-info {
+        .section_wrapper {
+            grid-template-rows: 464px 10px 508px;
+            row-gap: 32px;
+            position: relative;
+            @include lg() {
+                grid-template-columns: 608px 608px;
+                grid-template-rows: 332px;
+                column-gap: 68px;
+                row-gap: 64px;
+            }
+        }
+        &--circles {
+            @include lg() {
+                transform: rotate(90deg) translate(-50%, -50%);
+                position: absolute;
+                right: 37%;
+                top: 100%;
+            }
+        }
+        &--conditions {
+            display: grid;
+            grid-template-rows: 108px 1fr;
+            row-gap: 16px;
+            @include lg() {
+                grid-template-rows: 72px 220px;
+            }
+            &__content {
+                display: flex;
+                flex-flow: column;
+                justify-content: space-between;
+            }
+        }
+        &--more {
+            display: grid;
+            grid-template-rows: 72px 1fr;
+            row-gap: 16px;
+            @include lg() {
+                grid-template-rows: 36px 280px;
+            }
+            &__content {
+                display: flex;
+                flex-flow: column;
+                justify-content: space-between;
+            }
+            span {
+                border-bottom: 1px solid rgb(255, 145, 0);
+                color: rgb(255, 145, 0);
+            }
+        }
+        h2 {
+            padding-left: 16px;
+            margin: 0;
+            @include lg() {
+                padding-left: 32px;
+            }
+        }
+    }
+}

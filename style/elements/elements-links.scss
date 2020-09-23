@@ -1,0 +1,19 @@
+@import url("../typography/settings-colors.scss");
+
+ul{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+}
+
+
+a{
+    text-decoration: none;
+  
+   &:hover{
+    cursor: pointer;
+   
+}
+}

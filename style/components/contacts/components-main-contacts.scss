@@ -1,0 +1,135 @@
+@import "../../typography/setting-mixins.scss";
+@import "../../typography/settings-colors.scss";
+
+.main-contacts {
+    display: grid;
+    grid-template-rows: 500px 494px 572px;
+    row-gap: 96px;
+    &__map {
+        background-image: url("../../../images/images-contacts/Map.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    &__find-us {
+        position: absolute;
+        height: 382px;
+        left: 75px;
+        top: 280px;
+        background: #ffffff;
+        box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+        border-radius: 12px;
+        display: grid;
+        grid-template-columns: 216px 215px;
+        column-gap: 24px;
+        grid-template-rows: 150px 126px 44px;
+        padding: 32px;
+        &--address {
+            display: grid;
+            grid-template-rows: 24px 60px;
+            row-gap: 18px;
+        }
+        &--working-time {
+            display: grid;
+            grid-template-columns: 88px 103px;
+            column-gap: 24px;
+            grid-template-rows: 24px 38px 38px;
+            row-gap: 18px;
+            h3 {
+                grid-column: 1/3;
+            }
+        }
+        &--contacts {
+            display: grid;
+            grid-template-rows: 24px 19px 19px;
+            row-gap: 12px;
+            h3 {
+                margin-bottom: 6px;
+            }
+        }
+        &--btn {
+            grid-column: 1/3;
+        }
+        h3 {
+            color: $primary300;
+        }
+        p {
+            color: $grey700;
+        }
+        span {
+            color: $secondary800;
+        }
+    }
+    &__write-us {
+        &__form {
+            display: grid;
+            grid-template-columns: 409px 409px;
+            column-gap: 32px;
+            grid-template-rows: 26px 52px 192px 50px;
+            row-gap: 30px;
+            margin: 0 auto;
+            justify-content: center;
+            width: 100%;
+            padding-top: 84px;
+        }
+
+        &__heading {
+            grid-column: 1/3;
+            justify-self: center;
+            color: $primary300;
+        }
+        &__input {
+            border-radius: 6px;
+            border: 1px solid $grey500;
+            text-align: start;
+
+            &--message {
+                grid-column: 1/3;
+                padding: 16px 16px 156px 16px;
+            }
+            &--heading,
+            &--email {
+                padding: 16px 52px 16px 16px;
+            }
+        }
+
+        button {
+            width: 140px;
+            padding: 14px 32px;
+            text-transform: uppercase;
+
+            box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12),
+                0 2px 4px -1px rgba(0, 0, 0, 0.2);
+        }
+    }
+    &__transports {
+        background-color: $secondary50;
+        padding: 96px 0;
+        .section_wrapper {
+            width: 1290px;
+            grid-template-rows: 36px 296px;
+            row-gap: 48px;
+            justify-content: center;
+        }
+        &__types {
+            width: 1290px;
+            display: grid;
+            grid-template-columns: 410px 407px 407px;
+            column-gap: 32px;
+            &--metro,
+            &--minibus {
+                display: grid;
+                grid-template-rows: 32px 40px 40px;
+                row-gap: 16px;
+            }
+            &--bus {
+                display: grid;
+                grid-template-rows: 32px 40px 40px 60px 60px;
+                row-gap: 16px;
+            }
+        }
+        h2,
+        h3 {
+            color: $primary300;
+        }
+    }
+}

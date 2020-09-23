@@ -1,0 +1,68 @@
+@import "../typography/settings-colors.scss";
+@import "../typography/setting-mixins.scss";
+
+.sign-in {
+  background-image: url("../../images/images-index/Subtract.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  position: absolute;
+  width: 335px;
+  height: 562px;
+  left: 50%;
+  top: 12.5%;
+  transform: translate(-50%, -50%);
+
+  border-radius: 12px;
+
+  display: grid;
+  grid-template-rows: 52px 1fr;
+  row-gap: 70px;
+  padding: 46px 0 24px 0;
+  align-self: center;
+
+  align-items: center;
+  @include lg() {
+    background-image: url("../../images/images-index/background-sign-in.svg");
+    grid-template-columns: 163px 1fr;
+    grid-template-rows: auto;
+    column-gap: 125px;
+    padding: 0 90px 0 64px;
+    top: 11.5%;
+    width: 1290px;
+    height: 122px;
+    z-index: 1;
+  }
+  &__btn {
+    width: 287px;
+    height: 52px;
+    padding: 16px 94px;
+    text-transform: uppercase;
+    margin: 46px 24px;
+    @include lg() {
+      width: 163px;
+      height: 48px;
+      padding: 14px 32px;
+      margin: 0;
+    }
+  }
+  &__description {
+    width: 100%;
+    display: grid;
+    grid-template-rows: 52px 2px 52px 2px 52px 2px 52px;
+    row-gap: 24px;
+    align-items: flex-start;
+    justify-content: stretch;
+    padding-left: 24px;
+    @include lg() {
+      display: grid;
+      grid-template-columns: 133px 2px 165px 2px 183px 2px 157px;
+      grid-template-rows: 52px;
+      column-gap: 32px;
+      align-items: center;
+      &__border {
+        transform: rotate(90deg);
+      }
+    }
+  }
+}

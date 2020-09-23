@@ -1,0 +1,208 @@
+@import "../../typography/setting-mixins.scss";
+@import "../../typography/settings-colors.scss";
+
+.main-about {
+    display: grid;
+    grid-template-rows: 356px 1fr 1248px 674px;
+    row-gap: 48px;
+    @include lg() {
+        grid-template-rows: 256px 462px 1280px 412px;
+        row-gap: 96px;
+    }
+    &__team {
+        padding: 64px 0px;
+        background-color: $secondary600;
+        color: white;
+        text-align: center;
+        .section_wrapper {
+            grid-template-rows: 44px 160px;
+            row-gap: 24px;
+            @include lg() {
+                grid-template-rows: 44px 60px;
+                row-gap: 24px;
+                width: 850px;
+            }
+        }
+        p{
+            color: white;
+        }
+    }
+    &__trainers {
+        padding-bottom: 16px;
+        height: 100%;
+        .section_wrapper {
+            grid-template-rows: 656px 636px 10px;
+            row-gap: 64px;
+            justify-content: center;
+            @include lg() {
+                grid-template-columns: 629px 629px;
+                grid-template-rows: 356px 10px;
+                column-gap: 32px;
+                row-gap: 96px;
+            }
+        }
+        &--viara {
+            width: 335px;
+            display: grid;
+            grid-template-rows: 188px 1fr;
+            row-gap: 32px;
+            justify-items: center;
+            margin: 0 auto;
+            @include lg() {
+                grid-template-columns: 188px 1fr;
+                grid-template-rows: 356px;
+                margin: 0;
+                width: 629px;
+            }
+            &__content {
+                width: 335px;
+                display: grid;
+                grid-template-rows: 22px 22px 376px;
+                row-gap: 8px;
+            }
+            h2 {
+                color: $primary300;
+                text-align: center;
+            }
+            span {
+                color: $grey400;
+                width: 335px;
+                text-align: center;
+            }
+        }
+        &--vladimir {
+            width: 335px;
+            display: grid;
+            grid-template-rows: 188px 1fr;
+            row-gap: 32px;
+            justify-items: center;
+            margin: 0 auto;
+            @include lg() {
+                grid-template-columns: 188px 1fr;
+                grid-template-rows: 356px;
+                margin: 0;
+                width: 629px;
+            }
+            &__content {
+                width: 335px;
+                display: grid;
+                grid-template-rows: 22px 22px 356px;
+                row-gap: 8px;
+            }
+            h2 {
+                color: $primary300;
+                text-align: center;
+            }
+            span {
+                color: $grey400;
+                width: 335px;
+                text-align: center;
+            }
+        }
+    }
+    &__other-trainers {
+        padding-bottom: 32px;
+        .section_wrapper {
+            grid-template-rows: 264px 264px 264px 264px;
+            row-gap: 48px;
+            justify-content: center;
+            @include lg() {
+                width: 1064px;
+                grid-template-columns: 242px 242px 242px 242px;
+                column-gap: 32px;
+            }
+            &--first {
+                @include lg() {
+                    width: 1064px;
+                    margin: 0 auto;
+                    grid-template-columns: 1064px;
+                    grid-template-rows: 264px 920px;
+                    row-gap: 64px;
+                }
+            }
+        }
+
+        h2 {
+            color: $primary300;
+        }
+        span {
+            color: $grey400;
+        }
+        &__trainer {
+            width: 335px;
+            display: grid;
+            grid-template-rows: 204px 22px 22px;
+            row-gap: 8px;
+            justify-items: center;
+            margin: 0 auto;
+            @include lg() {
+                width: 242px;
+            }
+        }
+        &__trainer--hover {
+            width: 188px;
+            background-image: url("../../../images/images-about/trainer.svg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            @include lg() {
+                transition: background-image 0.3s ease-out 0.3s;
+                &:hover {
+                    cursor: pointer;
+                    background-image: url("../../../images/images-about/trainer-on-hover.svg");
+                }
+            }
+        }
+    }
+
+    &__join {
+        border-top: 12px solid $blue200;
+        background-color: $blue300;
+        color: white;
+        padding: 64px 0;
+        .section_wrapper {
+            grid-template-rows: 60px 104px 60px 60px 60px 62px;
+            row-gap: 24px;
+            @include lg() {
+                grid-template-columns: 228px 228px 228px 156px;
+                column-gap: 32px;
+                grid-template-rows: 44px 64px 52px;
+                row-gap: 24px;
+            }
+            h3 {
+                @include lg() {
+                    grid-column: 1/5;
+                    text-align: center;
+                }
+            }
+            p {
+                @include lg() {
+                    grid-column: 1/5;
+                    text-align: center;
+                    width: 850px;
+                }
+            }
+        }
+        &__input {
+            width: 100%;
+            border: 1px solid #ffffff;
+            border-radius: 6px;
+            background-color: $blue300;
+            padding: 16px 52px 16px 16px;
+            &::placeholder {
+                color: white;
+            }
+        }
+        button {
+            padding: 14px 129px;
+            width: 335px;
+            box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12),
+                0 2px 4px -1px rgba(0, 0, 0, 0.2);
+            border-radius: 100px;
+            @include lg() {
+                width: 156px;
+                margin-left: 16px;
+                padding: 14px 32px;
+            }
+        }
+    }
+}
